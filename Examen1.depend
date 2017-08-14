@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1502715275 source:/home/jhair/CodeBlocks/Examen/Examen1Zebra/Evaluador.cpp
+	"Evaluador.h"
+
+1502715275 /home/jhair/CodeBlocks/Examen/Examen1Zebra/Evaluador.h
+	<iostream>
+	<fstream>
+	<math.h>
+	<list>
+	<vector>
+
+1502719665 source:/home/jhair/CodeBlocks/Examen/Examen1Zebra/main.cpp
+	<iostream>
+	<fstream>
+	<math.h>
+	<list>
+	<vector>
+	"Evaluador.h"
+
