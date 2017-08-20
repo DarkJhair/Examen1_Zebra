@@ -14,7 +14,7 @@ using namespace std;
 int obtenerValor(Numero** arreglo, int pos)
 {
 
-    return arreglo[pos]->valor;
+    return arreglo[pos]->valor;obtenerValor;
 
 }
 
@@ -40,21 +40,45 @@ list <string>:: iterator it = palabras.begin();
 vector<int> eliminarRepetidos(vector<int> vector_a)
 {
     vector<int> respuesta;
-    return respuesta;
+  for(int i=0; i<(int)vector_a.size(); i++)
+  {
+    bool encontrado = false;
+    for(int j=0;j<(int)respuesta.size();j++)
+    {
+      if(vector_a[i]==respuesta[j])
+        encontrado = true;
+    }
+    if(!encontrado)
+      respuesta.push_back(vector_a[i]);
+  }
+  return respuesta;
 }
 
 //Guarda el contenido del objeto Pais que viene como parametro
 void guardar(string nombre_archivo, Pais* pais)
 {
-    ofstream sonic(nombre_archivo.c_str());
-    sonic<<pais;
+    ofstream out(nombre_archivo.c_str());
+  out<<pais->nombre<<endl;
+  out<<pais->capital<<endl;
+  out<<pais->habitantes<<endl;
+  out<<pais->superficie<<endl;
+  out.close();
 
 }
 
 //Devuelve un objeto Pais que contenga la informacion que se guardo anteriormente por la funcion guardar()
 Pais* abrir(string nombre_archivo)
 {
+ifstream in(nombre_archivo.c_str());
+  string nombre, capital;
+  int habitantes, superficie;
+  in>>nombre;
+  in>>capital;
+  in>>habitantes;
+  in>>superficie;
+  in.close();
 
+  return new Pais(nombre, capital, habitantes, superficie);
 
 
 }

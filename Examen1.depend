@@ -17,3 +17,13 @@
 	<vector>
 	"Evaluador.h"
 
+1502715275 source:/home/jhair/CodeBlocks/Examen/Examen otra vez/Evaluador.cpp
+	"Evaluador.h"
+
+1502715275 /home/jhair/CodeBlocks/Examen/Examen otra vez/Evaluador.h
+	<iostream>
+	<fstream>
+	<math.h>
+	<list>
+	<vector>
+
